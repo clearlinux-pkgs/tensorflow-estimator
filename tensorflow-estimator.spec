@@ -1,8 +1,8 @@
 Name     : tensorflow-estimator
-Version  : 1.13.0
+Version  : 1.14.0
 Release  : 73
-URL      : https://github.com/tensorflow/estimator/archive/v1.13.0.tar.gz
-Source0  : https://github.com/tensorflow/estimator/archive/v1.13.0.tar.gz
+URL      : https://github.com/tensorflow/estimator/archive/v1.14.0.tar.gz
+Source0  : https://github.com/tensorflow/estimator/archive/v1.14.0.tar.gz
 
 
 
@@ -33,6 +33,7 @@ BuildRequires : Keras_Preprocessing
 BuildRequires : mkl-dnn-dev
 BuildRequires : c-ares-dev
 BuildRequires : tensorflow
+BuildRequires : wrapt
 
 
 
@@ -56,7 +57,7 @@ Requires : termcolor
 TensorFlow
 
 %prep
-%setup -q  -n estimator-1.13.0
+%setup -q  -n estimator-1.14.0
 
 #%patch2 -p1
 
@@ -78,7 +79,7 @@ bazel-bin/tensorflow_estimator/tools/pip_package/build_pip_package /tmp/estimato
 export SOURCE_DATE_EPOCH=1485959355
 
 
-pip3 install --no-deps --force-reinstall --root %{buildroot}  /tmp/estimator_pip/tensorflow_estimator-1.13.0-py2.py3-none-any.whl
+pip3 install --no-deps --force-reinstall --root %{buildroot}  /tmp/estimator_pip/tensorflow_estimator-1.14.0-py2.py3-none-any.whl
 
 %files
 %defattr(-,root,root,-)
