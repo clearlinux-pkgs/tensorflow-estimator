@@ -3,8 +3,9 @@ Version  : 1.14.0
 Release  : 73
 URL      : https://github.com/tensorflow/estimator/archive/v1.14.0.tar.gz
 Source0  : https://github.com/tensorflow/estimator/archive/v1.14.0.tar.gz
-
-
+Source1 : https://github.com/bazelbuild/rules_pkg/releases/download/0.2.0/rules_pkg-0.2.0.tar.gz
+Source2 : https://github.com/bazelbuild/rules_cc/archive/0d5f3f2768c6ca2faca0079a997a97ce22997a0c.zip
+Source3 : https://github.com/bazelbuild/rules_proto/archive/b0cc14be5da05168b01db282fe93bdf17aa2b9f4.tar.gz
 
 %define __strip /bin/true
 %define debug_package %{nil}
@@ -71,7 +72,12 @@ InstallCache() {
 	cp $1 /tmp/cache/content_addressable/sha256/$sha256/file
 }
 
-bazel build //tensorflow_estimator/tools/pip_package:build_pip_package
+InstallCache %{SOURCE1}
+InstallCache %{SOURCE2}
+InstallCache %{SOURCE3}
+
+bazel clean
+bazel build --repository_cache=/tmp/cache //tensorflow_estimator/tools/pip_package:build_pip_package
 bazel-bin/tensorflow_estimator/tools/pip_package/build_pip_package /tmp/estimator_pip
 
 
