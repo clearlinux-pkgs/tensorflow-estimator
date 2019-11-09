@@ -1,8 +1,8 @@
 Name     : tensorflow-estimator
-Version  : 1.14.0
-Release  : 74
-URL      : https://github.com/tensorflow/estimator/archive/v1.14.0.tar.gz
-Source0  : https://github.com/tensorflow/estimator/archive/v1.14.0.tar.gz
+Version  : 1.15.1
+Release  : 75
+URL      : https://github.com/tensorflow/estimator/archive/v1.15.1.tar.gz
+Source0  : https://github.com/tensorflow/estimator/archive/v1.15.1.tar.gz
 Source1 : https://github.com/bazelbuild/rules_pkg/releases/download/0.2.0/rules_pkg-0.2.0.tar.gz
 Source2 : https://github.com/bazelbuild/rules_cc/archive/0d5f3f2768c6ca2faca0079a997a97ce22997a0c.zip
 Source3 : https://github.com/bazelbuild/rules_proto/archive/b0cc14be5da05168b01db282fe93bdf17aa2b9f4.tar.gz
@@ -58,7 +58,7 @@ Requires : termcolor
 TensorFlow
 
 %prep
-%setup -q  -n estimator-1.14.0
+%setup -q  -n estimator-1.15.1
 
 #%patch2 -p1
 
@@ -85,7 +85,7 @@ bazel-bin/tensorflow_estimator/tools/pip_package/build_pip_package /tmp/estimato
 export SOURCE_DATE_EPOCH=1485959355
 
 
-pip3 install --no-deps --force-reinstall --root %{buildroot}  /tmp/estimator_pip/tensorflow_estimator-1.14.0-py2.py3-none-any.whl
+pip3 install --no-deps --force-reinstall --root %{buildroot}  /tmp/estimator_pip/tensorflow_estimator-1.15.1-py2.py3-none-any.whl
 
 %files
 %defattr(-,root,root,-)
