@@ -1,6 +1,6 @@
 Name     : tensorflow-estimator
 Version  : 2.0.0
-Release  : 79
+Release  : 80
 URL      : https://github.com/tensorflow/estimator/archive/v2.0.0.tar.gz
 Source0  : https://github.com/tensorflow/estimator/archive/v2.0.0.tar.gz
 Source1 : https://github.com/bazelbuild/rules_pkg/releases/download/0.2.0/rules_pkg-0.2.0.tar.gz
