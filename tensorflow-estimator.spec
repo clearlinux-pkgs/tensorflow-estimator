@@ -1,6 +1,6 @@
 Name     : tensorflow-estimator
 Version  : 2.3.0
-Release  : 81
+Release  : 82
 URL      : https://github.com/tensorflow/estimator/archive/v2.3.0/tensorflow-estimator-2.3.0.tar.gz
 Source0  : https://github.com/tensorflow/estimator/archive/v2.3.0/tensorflow-estimator-2.3.0.tar.gz
 Summary  : A high-level TensorFlow API
@@ -53,7 +53,6 @@ bazel clean
 
 bazel build \
   --repository_cache=/var/tmp/cache \
-  --record_rule_instantiation_callstack \
   --verbose_failures \
   //tensorflow_estimator/tools/pip_package:build_pip_package
 
