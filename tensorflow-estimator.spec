@@ -1,6 +1,6 @@
 Name     : tensorflow-estimator
 Version  : 2.3.0
-Release  : 84
+Release  : 85
 URL      : https://github.com/tensorflow/estimator/archive/v2.3.0/tensorflow-estimator-2.3.0.tar.gz
 Source0  : https://github.com/tensorflow/estimator/archive/v2.3.0/tensorflow-estimator-2.3.0.tar.gz
 Summary  : A high-level TensorFlow API
